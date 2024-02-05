@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Siswa;
 
 class MasterController extends Controller
 {
@@ -17,7 +18,9 @@ class MasterController extends Controller
 
     public function mastersiswa()
     {
-        return view('data-siswa');
+        $siswas = Siswa::all();
+        
+        return view('data-siswa', ['siswas' => $siswas]);
     }
     public function masterteknisi()
     {

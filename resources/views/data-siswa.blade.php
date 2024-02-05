@@ -123,12 +123,12 @@
                         <ul aria-expanded="false">
                       
                      
-                            <li><a href="{{ route('data-siswa') }}" aria-expanded="false">Data Siswa</a></li>
+                            <li><a href="{{ route('data-siswa') }}" aria-expanded="a Ruang</a></lfalse">Data Siswa</a></li>
                             <li><a href="{{ route('data-guru') }}" aria-expanded="false">Data Guru</a></li>
                             <li><a href="{{ route('data-teknisi') }}" aria-expanded="false">Data Teknisi</a></li>
                             <li><a href="{{ route('data-kelas') }}" aria-expanded="false">Data Kelas</a></li>
                             <li><a href="{{ route('data-matpel') }}" aria-expanded="false">Data Mata Pelajaran</a></li>
-                            <li><a href="{{ route('data-ruang') }}" aria-expanded="false">Data Ruang</a></li>
+                            <li><a href="{{ route('data-ruang') }}" aria-expanded="false">Dati>
                             <li><a href="{{ route('data-barang') }}" aria-expanded="false">Data Barang</a></li>
                         </ul>
                     </li>
@@ -216,141 +216,21 @@
                                                 <th>Name</th>
                                                 <th>Kelas</th>
                                                 <th>Alamat</th>
-                                            
                                                 <th>Tanggal Lahir</th>
                                                 <th>Jenis Kelamin</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                              
-                                                <td>2011/04/25</td>
-                                                <td>Laki - Laki</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Garrett Winters</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                               
-                                                <td>2011/07/25</td>
-                                                <td>Perempuan</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ashton Cox</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>San Francisco</td>
-                                            
-                                                <td>2009/01/12</td>
-                                                <td>Perempuan</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cedric Kelly</td>
-                                                <td>Senior Javascript Developer</td>
-                                                <td>Edinburgh</td>
-                                               
-                                                <td>2012/03/29</td>
-                                                <td>Perempuan</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Airi Satou</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                               
-                                                <td>2008/11/28</td>
-                                                <td>Perempuan</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Brielle Williamson</td>
-                                                <td>Integration Specialist</td>
-                                                <td>New York</td>
-                                            
-                                                <td>2012/12/02</td>
-                                                <td>Laki - Laki</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Herrod Chandler</td>
-                                                <td>Sales Assistant</td>
-                                                <td>San Francisco</td>
-                                           
-                                                <td>2012/08/06</td>
-                                                <td>Laki - Laki</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Rhona Davidson</td>
-                                                <td>Integration Specialist</td>
-                                                <td>Tokyo</td>
-                                            
-                                                <td>2010/10/14</td>
-                                                <td>Laki - Laki</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Colleen Hurst</td>
-                                                <td>Javascript Developer</td>
-                                                <td>San Francisco</td>
-                                          
-                                                <td>2009/09/15</td>
-                                                <td>Laki - Laki</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Sonya Frost</td>
-                                                <td>Software Engineer</td>
-                                                <td>Edinburgh</td>
-                                            
-                                                <td>2008/12/13</td>
-                                                <td>Perempuan</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jena Gaines</td>
-                                                <td>Office Manager</td>
-                                                <td>London</td>
-                                           
-                                                <td>2008/12/19</td>
-                                                <td>Perempuan</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Quinn Flynn</td>
-                                                <td>Support Lead</td>
-                                                <td>Edinburgh</td>
-                                             
-                                                <td>2013/03/03</td>
-                                                <td>Perempuan</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Charde Marshall</td>
-                                                <td>Regional Director</td>
-                                                <td>San Francisco</td>
-                                             
-                                                <td>2008/10/16</td>
-                                                <td>Laki - Laki</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Haley Kennedy</td>
-                                                <td>Senior Marketing Designer</td>
-                                                <td>London</td>
-                                              
-                                                <td>2012/12/18</td>
-                                                <td>Laki - Laki</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tatyana Fitzpatrick</td>
-                                                <td>Regional Director</td>
-                                                <td>London</td>
-                                            
-                                                <td>2010/03/17</td>
-                                                <td>Laki - Laki</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Michael Silva</td>
-                                                <td>Marketing Designer</td>
-                                                <td>London</td>
-                                            
-                                                <td>2012/11/27</td>
-                                                <td>Laki - Laki</td>
-                                            </tr>
-                                            
+                                            @foreach ($siswas as $siswa)
+                                                <tr>
+                                                    <td>{{ $siswa->name }}</td>
+                                                    <td>{{ $siswa->kelas }}</td>
+                                                    <td>{{ $siswa->alamat }}</td>
+                                                    <td>{{ $siswa->tanggal_lahir }}</td>
+                                                    <td>{{ $siswa->jenis_kelamin }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>

@@ -153,7 +153,7 @@
                         <ul aria-expanded="false">
                       
                             <li><a href="{{ route('data-presensi') }}" aria-expanded="false">Presensi Admin</a></li>
-                            <li><a href="{{ route('data-nilai') }}" aria-expanded="false">Nilai Moodle</a></li>
+                            <li><a href="{{ route('data-nilai') }}" aria-expanded="false">Nilai</a></li>
                         </ul>
                     </li>
 
